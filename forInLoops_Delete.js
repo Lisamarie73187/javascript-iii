@@ -3,46 +3,65 @@
 // ========================
 
 
-// First we'll look at the difference between accessing property values in a for in loop and accessing the property name in a for in loop.
+// First we'll look at the difference between accessing property values in a for in loop and accessing 
+//the property name in a for in loop.
 
-// In the example below, we are accessing the property values. Uncomment the code below, run it and look at what prints in the console.
+// In the example below, we are accessing the property values. Uncomment the code below, 
+//run it and look at what prints in the console.
 
-// var values = {
-//   one: 'These',
-//   two: ' are',
-//   three: ' the',
-//   four: ' property',
-//   five: ' values.'
-// } 
+var values = {
+  one: 'These',
+  two: ' are',
+  three: ' the',
+  four: ' property',
+  five: ' values.'
+} 
 
-// for(var key in values) {
-//   console.log(values[key])
-// }
+for(var key in values) {
+  console.log(values[key])
+}
 
 // In this next example, we are accessing the property names themselves. Uncomment the code below, run it and look at what prints in the console.
 
-// for(var key in values) {
-//   console.log(key)
-// }
-
-
-// ========================
-
-
-// Inside the function showValues, write a for in loop that concatenates each of the property values and returns the concatenated string.
-
-function showValues( obj ) {
-  // CODE HERE
+for(var key in values) {
+  console.log(key)
 }
 
 
 // ========================
 
 
-// Write a function called greaterThan10 that takes in an object. Write a for in loop that loops over the object and changes any value that is great than 10 to 0. Return the updated object.
+// Inside the function showValues, write a for in loop that concatenates each of the property 
+//values and returns the concatenated string.
 
-// CODE HERE
+obj = {
+  name: 'bob',
+  age: 30
+}
 
+function showValues( obj ) {
+  var newStr = ''
+  for(var prop in obj) {
+   newStr = newStr + obj[prop]
+  }return newStr
+}
+console.log(showValues(obj))
+
+
+// ========================
+
+
+// Write a function called greaterThan10 that takes in an object. Write a for in loop 
+//that loops over the object and changes any value that is great than 10 to 0. 
+//Return the updated object.
+
+function greaterThan10(object1){
+  for( var prop in object1){
+    if(object1[prop] > 10 ){
+      object1[prop] = 0
+    }
+  }return object1
+}
 
 
 // ========================

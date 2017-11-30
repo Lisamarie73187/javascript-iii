@@ -31,40 +31,52 @@ var employees = [{
   "department": "Research and Development"
 }]
 
-// Create a function called 'employeeUpdater' that takes no parameters. employeeUpdater will loop over the array above and perform the following:
+// Create a function called 'employeeUpdater' that takes no parameters. employeeUpdater will loop over 
+//the array above and perform the following:
 //  1. If employee's first name is Theo, remove that employee because he just got fired.
 //  2. If the employee's first name is Lorie, change her department to 'HR'.
 //  3. Return the updated employee array.
 
-// Code here
+function employeeUpdater(){
+  for(var i = 0; i < employees.length; i++ ){
+    if(employees[i]['firstName'] === 'Theo'){
+      employees.splice(i,1)
+      i--
+    }else if(employees[i]['firstName'] === 'Lorie'){
+      employees[i]['department'] = 'HR'
+    }
+  }return employees
+}
 
 
-
-
-
-
+console.log(employees)
 
 // === PROBLEM 2 ==========
 
 
-// The array below represents IDs tied to reported workplace accidents. An employee accidentally entered in duplicates to array, making it look as though there are more accidents this year than there actually are. 
-// 1. Write a function called 'removeDuplicates' that will remove all duplicate entries in the workplaceAccidents array.
+// The array below represents IDs tied to reported workplace accidents. An employee accidentally 
+//entered in duplicates to array, making it look as though there are more accidents this 
+//year than there actually are. 
+// 1. Write a function called 'removeDuplicates' that will remove all duplicate entries in the 
+//workplaceAccidents array.
 // 2. Use nested for loops to check for duplicate numbers, and then remove the duplicates from the array.
 // 3. Return the updated array.
 
 var workplaceAccidents = [12, 56, 44, 3, 29, 56, 56, 3, 7, 12];
 
-// Code here
+function removeDuplicates(workplaceAccidents){
+  for(var i = 0; i < workplaceAccidents.length; i++){
+    
+    if(workplaceAccidents.indexOf(workplaceAccidents[i]) !== i){
+        workplaceAccidents.splice(i,1)
+        i--
+    }
+  } return workplaceAccidents
+}
 
+console.log(workplaceAccidents)
 
-
-
-
-
-
-
-
-
+console.log(workplaceAccidents)
 // === PROBLEM 3 ==========
 
 var cat = {
