@@ -67,9 +67,9 @@ function greaterThan10(object1){
 // ========================
 
 
-// Write a function called double that takes in an object. Write a for in loop that loops over the object and changes every value to be itself multipled by 2. Return the updated object.
-
-// CODE HERE
+// Write a function called double that takes in an object. 
+//Write a for in loop that loops over the object and changes every value 
+//to be itself multipled by 2. Return the updated object.
 
 
 

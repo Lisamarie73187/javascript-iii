@@ -29,16 +29,43 @@ class Employee {
         this.email = email
         this.age = age
     }
-    makeWidget(first_name,last_name){
-        return first_name + ' ' + last_name + "'s" + " Widget"
+    makeWidget(first,last){
+        return `${first} ${last}'s Widget`
     }
 }
 
 
-var dave = new Employee()
-dave = dave.makeWidget('dave','smith')
-
+var dave = new Employee('dave','smith','dave@widget.com',40)
+widget = dave.makeWidget('Dave','Smith')
 console.log(dave)
+console.log(widget)
+
+class Manager {
+    constructor(first_name,last_name,email,age){
+        this.first_name = first_name
+        this.last_name = last_name
+        this.email = email
+        this.age = age
+        this.reports = []
+    }
+    hire(newemployee){
+        return this.reports.push(newemployee)
+    }
+    fire(index){
+      this.reports.splice(index,1)
+    }
+}
+
+var manager1 = new Manager('Rob','Stark','robstark@widget.com',40)
+console.log(manager1)
+manager1.hire('bob')
+var newemployeeList = ['bryan','john','steve']
+manager1.hire(newemployeeList)
+console.log(manager1)
+console.log(manager1)
+manager1.fire(0)
+console.log(manager1)
+
 
 /*
 
@@ -55,13 +82,13 @@ They can (methods) :
 
 call your class Manager
 
-*/
+var manager
 
 
 
 
 
-/*
+
 Manager for Widget Co. get promoted when they get more employees, and get a bonus when they fire employees.
 Progressive Managers have all the same properties as the manager, but
 they also have :
