@@ -4,12 +4,16 @@
 // We want to filter down to just the even numbers
 
 // The filter function takes a callback with the parameters
-// function(element, index, wholeArray){}  Function Form
+//function(element, index, wholeArray){}  Function Form
 // (element, index, wholeArray)=>{}    Arrow Form
 
 const mixedNumbers = [6,3,1,7,5,2,6,8,9,4,2,7,9,3,1,8,4,3];
 
-let evenNumbers // = mixedNumbers.filter(/* Provide Your Callback Here */)
+
+let evenNumbers = mixedNumbers.filter(function(element,index,array){
+    return element % 2 === 0
+})
+console.log(evenNumbers)
 
 // Below we have an array of prices.  We want to calculate their totals after
 // We want to use a map function on the prices to calculate a new array of
@@ -24,8 +28,10 @@ let evenNumbers // = mixedNumbers.filter(/* Provide Your Callback Here */)
 
 const prices = [15.00, 23.00, 78.00, 34.00, 12.00, 86.00, 12.00, 79.00, 32.00];
 
-let postTaxPrices // = prices.map(/* Provide Your Callback Here );
-
+let postTaxPrices = prices.map(function(element){
+    return element * 1.07
+});
+console.log(postTaxPrices)
 
 
 // Below we have an array of populations.

@@ -71,14 +71,46 @@ function greaterThan10(object1){
 //Write a for in loop that loops over the object and changes every value 
 //to be itself multipled by 2. Return the updated object.
 
+var sampleObjNumbers = {
+  one: 1,
+  two: 2,
+  three: 3
+}
 
-
+function double(obj){
+for(var prop in obj){
+  obj[prop] = obj[prop]*2
+}
+return obj
+}
+console.log(double(sampleObjNumbers))
 // ========================
 
 
-// Write a function called secrets that will take in an object. Create an empty string variable. Write a for in loop that loops over the object. If the property name starts with an 'sh', concatenate the value to the string variable. By the end of the for in loop, you should have a sentence, return that sentence.
+// Write a function called secrets that will take in an object. Create an empty string variable. 
+//Write a for in loop that loops over the object. If the property name starts with an 'sh', 
+//concatenate the value to the string variable. By the end of the for in loop, you should have a 
+//sentence, return that sentence.
 
-// CODE HERE
+var secretObj = {
+  shhh: 'I',
+  sh: 'really',
+  s: 'dislike',
+  shhhh: 'love',
+  shhdh:'javascript'
+}
+
+function secrets(objSecret){
+  var string = ''
+  for( var prop in objSecret){
+    if(objSecret === objSecret['sh']){
+      string = string + objSecret[prop] 
+    }
+  }
+  return string
+}
+
+console.log(secrets(secretObj))
 
 
 // ========================
