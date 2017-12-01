@@ -113,10 +113,14 @@ function secrets(objSecret){
 console.log(secrets(secretObj))
 
 
-// ========================
+// ======================== LEFT OFF HERE 11/30*****=======================================
+//*************************************************** =======================================
+// ===================================================================================
 
 
-// Sometimes it's needed to delete object properties. All you need is the word delete before a reference to the object property value. Uncomment the example below to see a for in loop deleting all the properties inside an object.
+// Sometimes it's needed to delete object properties. All 
+//you need is the word delete before a reference to the object property value.
+// Uncomment the example below to see a for in loop deleting all the properties inside an object.
 
 // var deleteAllThethings = {
 //   one: 1,
