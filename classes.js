@@ -29,14 +29,14 @@ class Employee {
         this.email = email
         this.age = age
     }
-    makeWidget(first,last){
-        return `${first} ${last}'s Widget`
+    makeWidget(){
+        return `${this.first_name} ${this.last_name} Widget`
     }
 }
 
 
 var dave = new Employee('dave','smith','dave@widget.com',40)
-widget = dave.makeWidget('Dave','Smith')
+widget = dave.makeWidget()
 console.log(dave)
 console.log(widget)
 
@@ -95,8 +95,26 @@ class ProgressiveManager {
         this.title = 'Not a manager'
         this.bonus= 0
     }
-    
+    updateTitle(numOfEmp){
+        if(numOfEmp === 0){
+        this.title = 'Not a manager'
+        }else if( numOfEmp >= 1 && numOfEmp <=3 ){
+        this.title = 'Barely Manager'
+        }else if( numOfEmp >= 4 && numOfEmp <=10 ){
+        this.title = 'Mostly Manager'
+        }else if( numOfEmp >= 11 && numOfEmp <=50 ){
+        this.title = 'Manager'
+        }else if( numOfEmp >= 51 && numOfEmp <=100 ){
+        this.title = 'Manager Plus'
+        }else if( numOfEmp > 100){
+        this.title = 'Bestest Manager'
+        }
+    }fire(){}
 }
+
+var steve = new ProgressiveManager('matt','carter','mattcarter@mail.com',40)
+steve.updateTitle(4)
+console.log(steve)
 
 
 

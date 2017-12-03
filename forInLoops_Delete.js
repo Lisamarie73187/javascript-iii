@@ -3,7 +3,8 @@
 // ========================
 
 
-// First we'll look at the difference between accessing property values in a for in loop and accessing 
+// First we'll look at the difference between accessing property values in a for in loop and 
+//accessing 
 //the property name in a for in loop.
 
 // In the example below, we are accessing the property values. Uncomment the code below, 
@@ -103,7 +104,7 @@ var secretObj = {
 function secrets(objSecret){
   var string = ''
   for( var prop in objSecret){
-    if(objSecret === objSecret['sh']){
+    if(objSecret[prop] === objSecret['sh']){
       string = string + objSecret[prop] 
     }
   }
